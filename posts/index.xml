@@ -6,8 +6,84 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 07 Nov 2019 12:31:25 +0800</lastBuildDate>
+		<lastBuildDate>Thu, 07 Nov 2019 12:50:25 +0800</lastBuildDate>
 		<atom:link href="https://lhh2000.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>javascript杂项</title>
+			<link>https://lhh2000.github.io/posts/js2/</link>
+			<pubDate>Thu, 07 Nov 2019 12:50:25 +0800</pubDate>
+			
+			<guid>https://lhh2000.github.io/posts/js2/</guid>
+			<description>myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; } // 返回</description>
+			<content type="html"><![CDATA[<p>myObj.hasOwnProperty(propname)  有该属性返回true，无该属性返回false</p>
+
+<hr />
+
+<p>Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">randomRange</span><span class="p">(</span><span class="nx">myMin</span><span class="p">,</span> <span class="nx">myMax</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">myMax</span> <span class="o">-</span> <span class="nx">myMin</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">myMin</span><span class="p">;</span>
+<span class="p">}</span>  <span class="c1">// 返回 myMin ~ myMax 中随机值
+</span></code></pre></div>
+<hr />
+
+<p>Math.floor()  向下取整</p>
+
+<hr />
+
+<p>var expression = /and/gi; //  g 代表全局， i 代表忽略大小写</p>
+
+<p>var andCount = testString.match(expression).length;  // 用 andCount 存储 testString 中匹配到 expression 的次数</p>
+
+<p>/\d+/g;    &ldquo;+&rdquo; 表示允许正则表达式匹配一个或更多数字</p>
+
+<p>​               &ldquo;g&rdquo; 表示允许正则表达式找到所有匹配而不是仅仅找到第一个匹配</p>
+
+<p>/\s+/g;  匹配一个字符串中的空白字符</p>
+
+<p>/\S/g;  匹配一个字符串中的非空白字符</p>
+
+<hr />
+
+<p>对象自身的特征：属性</p>
+
+<p>对象自身的函数：方法</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">motorBike</span> <span class="o">=</span> <span class="p">{</span>                         <span class="c1">//直接创建对象
+</span><span class="c1"></span><span class="s2">&#34;engines&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s2">&#34;wheels&#34;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="s2">&#34;seats&#34;</span><span class="o">:</span> <span class="mi">3</span>
+<span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">MotorBike</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>           <span class="c1">//构造函数来创建对象
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">engines</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Car</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">wheels</span><span class="p">,</span> <span class="nx">seats</span><span class="p">,</span> <span class="nx">engines</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//构造函数中添加参数
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="nx">wheels</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="nx">seats</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">engines</span> <span class="o">=</span> <span class="nx">engines</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">myCar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Car</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">// this is a private variable
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">// these are public methods
+</span><span class="c1"></span>	<span class="k">this</span><span class="p">.</span><span class="nx">accelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">change</span><span class="p">)</span> <span class="p">{</span>
+  		<span class="nx">speed</span> <span class="o">+=</span> <span class="nx">change</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="k">this</span><span class="p">.</span><span class="nx">decelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  		<span class="nx">speed</span> <span class="o">-=</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="k">this</span><span class="p">.</span><span class="nx">getSpeed</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  		<span class="k">return</span> <span class="nx">speed</span><span class="p">;</span>
+	<span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>]]></content>
+		</item>
 		
 		<item>
 			<title>javascript数组小结</title>
@@ -29,87 +105,79 @@
 <hr />
 
 <h3 id="map方法-不改变原数组-获得新数组-示例中将原数组-3">map方法，不改变原数组，获得新数组 (示例中将原数组+3)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">oldArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
 
-<h3 id="var-oldarray-1-2-3-4-5">var oldArray = [1,2,3,4,5];</h3>
+<span class="kd">var</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="nx">oldArray</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
 
-<h3 id="var-newarray-oldarray-map-function-val">var newArray = oldArray.map(function(val) {</h3>
+<span class="k">return</span> <span class="nx">val</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
 
-<h3 id="return-val-3">return val + 3;</h3>
+<span class="p">});</span>
 
-<h3 id="toc_8">});</h3>
-
-<h3 id="newarray-4-5-6-7-8">newArray = [4,5,6,7,8];</h3>
-
+<span class="nx">newArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">];</span>
+</code></pre></div>
 <hr />
 
 <h3 id="reduce方法-迭代一个数组-示例中将数组所有数相加">reduce方法，迭代一个数组 (示例中将数组所有数相加)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">];</span>
 
-<h3 id="var-array-4-5-6-7-8">var array = [4,5,6,7,8];</h3>
+<span class="nx">singleVal</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">previousVal</span><span class="p">,</span> <span class="nx">currentVal</span><span class="p">)</span> <span class="p">{</span>
 
-<h3 id="singleval-array-reduce-function-previousval-currentval">singleVal = array.reduce(function(previousVal, currentVal) {</h3>
+<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">previousVal</span> <span class="o">+</span> <span class="nx">currentVal</span><span class="p">;</span>
 
-<h3 id="var-sum-previousval-currentval">var sum = previousVal + currentVal;</h3>
+<span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
 
-<h3 id="return-sum">return sum;</h3>
-
-<h3 id="toc_15">});</h3>
-
+<span class="p">});</span>
+</code></pre></div>
 <hr />
 
 <h3 id="filter方法-过滤一个数组-示例中将数组小于6的数滤出">filter方法，过滤一个数组 (示例中将数组小于6的数滤出)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">oldArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">];</span>
 
-<h3 id="var-oldarray-1-2-3-4-5-6-7-8-9-10">var oldArray = [1,2,3,4,5,6,7,8,9,10];</h3>
+<span class="kd">var</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="nx">oldArray</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
 
-<h3 id="var-newarray-oldarray-filter-function-val">var newArray = oldArray.filter(function(val) {</h3>
+<span class="k">return</span> <span class="nx">val</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span>
 
-<h3 id="return-val-6">return val &lt; 6;</h3>
-
-<h3 id="toc_20">});</h3>
-
+<span class="p">});</span>
+</code></pre></div>
 <hr />
 
 <h3 id="sort方法-排序数组">sort方法，排序数组</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">2</span><span class="p">];</span>
 
-<h3 id="var-array-1-12-21-2">var array = [1, 12, 21, 2];</h3>
+<span class="nx">array</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
 
-<h3 id="array-sort-function-a-b">array.sort(function(a, b) {</h3>
+<span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
 
-<h3 id="return-a-b">return a - b;</h3>
+<span class="p">});</span>
 
-<h3 id="toc_25">});</h3>
-
-<h3 id="array-1-2-12-21">array = [1, 2, 12, 21];</h3>
-
+<span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">];</span>
+</code></pre></div>
 <hr />
 
 <h3 id="reverse方法-翻转数组">reverse方法，翻转数组</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">];</span>
 
-<h3 id="var-array-1-2-3-4-5-6-7">var array = [1,2,3,4,5,6,7];</h3>
+<span class="nx">array</span><span class="p">.</span><span class="nx">reverse</span><span class="p">();</span>
 
-<h3 id="array-reverse">array.reverse();</h3>
-
-<h3 id="array-7-6-5-4-3-2-1">array = [7, 6, 5, 4, 3, 2, 1];</h3>
-
+<span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">];</span>
+</code></pre></div>
 <hr />
 
 <h3 id="concat方法-拼接数组">concat方法，拼接数组</h3>
-
-<h3 id="newarray-oldarray-concat-otherarray">newArray = oldArray.concat(otherArray);</h3>
-
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="nx">oldArray</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">otherArray</span><span class="p">);</span>
+</code></pre></div>
 <h3 id="otherarray-拼接在-oldarray-的后面-并赋值给newarrey">otherArray<code>拼接在</code>oldArray` 的后面 并赋值给newArrey</h3>
 
 <hr />
 
 <h3 id="split方法-将字符串分割为数组">split方法， 将字符串分割为数组</h3>
-
-<h3 id="var-array-string-split-按空格进行分割">var array = string.split(&rsquo; &lsquo;); （按空格进行分割)</h3>
-
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>  <span class="c1">//按空格进行分割
+</span></code></pre></div>
 <hr />
 
 <h3 id="join方法-将数组转换为字符串">join方法，将数组转换为字符串</h3>
-
-<h3 id="joinedstring-joinme-join-数组元素间增添一个空格-组成字符串">joinedString = joinMe.join(&rdquo; &ldquo;);   （数组元素间增添一个空格，组成字符串）</h3>
-]]></content>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">joinedString</span> <span class="o">=</span> <span class="nx">joinMe</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">);</span>  <span class="c1">//数组元素间增添一个空格,组成字符串
+</span></code></pre></div>]]></content>
 		</item>
 		
 		<item>

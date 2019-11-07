@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="javascript杂项">
+<meta itemprop="description" content="myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin &#43; 1)) &#43; myMin; } // 返回">
+
+
+<meta itemprop="datePublished" content="2019-11-07T12:50:25&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-07T12:50:25&#43;08:00" />
+<meta itemprop="wordCount" content="341">
+
+
+
+<meta itemprop="keywords" content="untagged," />
+<meta property="og:title" content="javascript杂项" />
+<meta property="og:description" content="myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin &#43; 1)) &#43; myMin; } // 返回" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lhh2000.github.io/posts/js2/" />
+<meta property="article:published_time" content="2019-11-07T12:50:25+08:00" />
+<meta property="article:modified_time" content="2019-11-07T12:50:25+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="javascript杂项"/>
+<meta name="twitter:description" content="myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin &#43; 1)) &#43; myMin; } // 返回"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>javascript杂项</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lhh2000.github.io//posts">小李的博客</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lhh2000.github.io/about_me/">About</a>
+<a href="https://lhh2000.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lhh2000.github.io/about_me/">About</a></li>
+			<li><a href="https://lhh2000.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Nov 7, 2019</span></div>
+			<h1>javascript杂项</h1>
+		</header>
+		<div class="content">
+			<p>myObj.hasOwnProperty(propname)  有该属性返回true，无该属性返回false</p>
+
+<hr />
+
+<p>Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">randomRange</span><span class="p">(</span><span class="nx">myMin</span><span class="p">,</span> <span class="nx">myMax</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">myMax</span> <span class="o">-</span> <span class="nx">myMin</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">myMin</span><span class="p">;</span>
+<span class="p">}</span>  <span class="c1">// 返回 myMin ~ myMax 中随机值
+</span></code></pre></div>
+<hr />
+
+<p>Math.floor()  向下取整</p>
+
+<hr />
+
+<p>var expression = /and/gi; //  g 代表全局， i 代表忽略大小写</p>
+
+<p>var andCount = testString.match(expression).length;  // 用 andCount 存储 testString 中匹配到 expression 的次数</p>
+
+<p>/\d+/g;    &ldquo;+&rdquo; 表示允许正则表达式匹配一个或更多数字</p>
+
+<p>​               &ldquo;g&rdquo; 表示允许正则表达式找到所有匹配而不是仅仅找到第一个匹配</p>
+
+<p>/\s+/g;  匹配一个字符串中的空白字符</p>
+
+<p>/\S/g;  匹配一个字符串中的非空白字符</p>
+
+<hr />
+
+<p>对象自身的特征：属性</p>
+
+<p>对象自身的函数：方法</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">motorBike</span> <span class="o">=</span> <span class="p">{</span>                         <span class="c1">//直接创建对象
+</span><span class="c1"></span><span class="s2">&#34;engines&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s2">&#34;wheels&#34;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="s2">&#34;seats&#34;</span><span class="o">:</span> <span class="mi">3</span>
+<span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">MotorBike</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>           <span class="c1">//构造函数来创建对象
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">engines</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Car</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">wheels</span><span class="p">,</span> <span class="nx">seats</span><span class="p">,</span> <span class="nx">engines</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//构造函数中添加参数
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="nx">wheels</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="nx">seats</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">engines</span> <span class="o">=</span> <span class="nx">engines</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">myCar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Car</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">// this is a private variable
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">// these are public methods
+</span><span class="c1"></span>	<span class="k">this</span><span class="p">.</span><span class="nx">accelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">change</span><span class="p">)</span> <span class="p">{</span>
+  		<span class="nx">speed</span> <span class="o">+=</span> <span class="nx">change</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="k">this</span><span class="p">.</span><span class="nx">decelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  		<span class="nx">speed</span> <span class="o">-=</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="k">this</span><span class="p">.</span><span class="nx">getSpeed</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  		<span class="k">return</span> <span class="nx">speed</span><span class="p">;</span>
+	<span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-tag meta-icon">
+					<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+					<line x1="7" y1="7" x2="7" y2="7"></line>
+				</svg><span class="tag"><a href="https://lhh2000.github.io/%20tags/untagged">untagged</a></span>
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				341 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2019-11-07 12:50 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="prev-post" href="https://lhh2000.github.io/posts/js/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>javascript数组小结</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2019 <a href="https://lhh2000.github.io/">lhh</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<div id="home-social">
+			<a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter">Twitter</a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram">Instagram</a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github">Github</a>
+		</div>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lhh2000.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lhh2000.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>

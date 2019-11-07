@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 07 Nov 2019 12:31:25 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 12:50:25 +0800</lastBuildDate>
     
 	<atom:link href="https://lhh2000.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript杂项</title>
+      <link>https://lhh2000.github.io/posts/js2/</link>
+      <pubDate>Thu, 07 Nov 2019 12:50:25 +0800</pubDate>
+      
+      <guid>https://lhh2000.github.io/posts/js2/</guid>
+      <description>myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; } // 返回</description>
+    </item>
     
     <item>
       <title>javascript数组小结</title>
