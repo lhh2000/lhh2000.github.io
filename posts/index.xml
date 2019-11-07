@@ -16,7 +16,9 @@
 			
 			<guid>https://lhh2000.github.io/posts/js2/</guid>
 			<description>myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; } // 返回</description>
-			<content type="html"><![CDATA[<p>myObj.hasOwnProperty(propname)  有该属性返回true，无该属性返回false</p>
+			<content type="html"><![CDATA[<hr />
+
+<p>myObj.hasOwnProperty(propname)  有该属性返回true，无该属性返回false</p>
 
 <hr />
 
@@ -94,9 +96,11 @@
 			<description>push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组+3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val + 3;</description>
 			<content type="html"><![CDATA[
 
+<hr />
+
 <h3 id="push-推入数组末尾">push()  推入数组末尾</h3>
 
-<h3 id="pop-移除数组末项">pop()  移除数组末项</h3>
+<p>pop()  移除数组末项</p>
 
 <h3 id="shift-移除数组首项">shift()  移除数组首项</h3>
 
@@ -187,6 +191,8 @@
 			<guid>https://lhh2000.github.io/posts/py/</guid>
 			<description>append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&amp;lsquo;content&amp;rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列</description>
 			<content type="html"><![CDATA[
+
+<hr />
 
 <h3 id="append-附加元素到列表末尾">append()   附加元素到列表末尾</h3>
 
