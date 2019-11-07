@@ -18,7 +18,6 @@
 			<description>append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&amp;lsquo;content&amp;rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列</description>
 			<content type="html"><![CDATA[
 
-<blockquote>
 <h3 id="append-附加元素到列表末尾">append()   附加元素到列表末尾</h3>
 
 <h3 id="insert-index-value-插入元素到指定位置">insert(index, value)   插入元素到指定位置</h3>
@@ -34,7 +33,6 @@
 <h3 id="reverse-反转列表元素">reverse() 反转列表元素</h3>
 
 <h3 id="len-lists-获取列表长度">len(lists)   获取列表长度</h3>
-</blockquote>
 ]]></content>
 		</item>
 		
