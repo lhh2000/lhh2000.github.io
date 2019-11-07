@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on 小李的博客</title>
+    <link>https://lhh2000.github.io/tags/untagged/</link>
+    <description>Recent content in untagged on 小李的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 07 Nov 2019 11:04:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://lhh2000.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python列表函数小结</title>
+      <link>https://lhh2000.github.io/posts/py/</link>
+      <pubDate>Thu, 07 Nov 2019 11:04:25 +0800</pubDate>
+      
+      <guid>https://lhh2000.github.io/posts/py/</guid>
+      <description>append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&amp;lsquo;content&amp;rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列</description>
+    </item>
+    
+  </channel>
+</rss>
