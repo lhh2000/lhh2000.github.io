@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 07 Nov 2019 11:04:25 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 12:31:25 +0800</lastBuildDate>
     
 	<atom:link href="https://lhh2000.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript数组小结</title>
+      <link>https://lhh2000.github.io/posts/js/</link>
+      <pubDate>Thu, 07 Nov 2019 12:31:25 +0800</pubDate>
+      
+      <guid>https://lhh2000.github.io/posts/js/</guid>
+      <description>push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组+3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val + 3;</description>
+    </item>
     
     <item>
       <title>python列表函数小结</title>

@@ -6,8 +6,111 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 07 Nov 2019 11:04:25 +0800</lastBuildDate>
+		<lastBuildDate>Thu, 07 Nov 2019 12:31:25 +0800</lastBuildDate>
 		<atom:link href="https://lhh2000.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>javascript数组小结</title>
+			<link>https://lhh2000.github.io/posts/js/</link>
+			<pubDate>Thu, 07 Nov 2019 12:31:25 +0800</pubDate>
+			
+			<guid>https://lhh2000.github.io/posts/js/</guid>
+			<description>push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组+3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val + 3;</description>
+			<content type="html"><![CDATA[
+
+<h3 id="push-推入数组末尾">push()  推入数组末尾</h3>
+
+<h3 id="pop-移除数组末项">pop()  移除数组末项</h3>
+
+<h3 id="shift-移除数组首项">shift()  移除数组首项</h3>
+
+<h3 id="unshift-移入数组首项">unshift()  移入数组首项</h3>
+
+<hr />
+
+<h3 id="map方法-不改变原数组-获得新数组-示例中将原数组-3">map方法，不改变原数组，获得新数组 (示例中将原数组+3)</h3>
+
+<h3 id="var-oldarray-1-2-3-4-5">var oldArray = [1,2,3,4,5];</h3>
+
+<h3 id="var-newarray-oldarray-map-function-val">var newArray = oldArray.map(function(val) {</h3>
+
+<h3 id="return-val-3">return val + 3;</h3>
+
+<h3 id="toc_8">});</h3>
+
+<h3 id="newarray-4-5-6-7-8">newArray = [4,5,6,7,8];</h3>
+
+<hr />
+
+<h3 id="reduce方法-迭代一个数组-示例中将数组所有数相加">reduce方法，迭代一个数组 (示例中将数组所有数相加)</h3>
+
+<h3 id="var-array-4-5-6-7-8">var array = [4,5,6,7,8];</h3>
+
+<h3 id="singleval-array-reduce-function-previousval-currentval">singleVal = array.reduce(function(previousVal, currentVal) {</h3>
+
+<h3 id="var-sum-previousval-currentval">var sum = previousVal + currentVal;</h3>
+
+<h3 id="return-sum">return sum;</h3>
+
+<h3 id="toc_15">});</h3>
+
+<hr />
+
+<h3 id="filter方法-过滤一个数组-示例中将数组小于6的数滤出">filter方法，过滤一个数组 (示例中将数组小于6的数滤出)</h3>
+
+<h3 id="var-oldarray-1-2-3-4-5-6-7-8-9-10">var oldArray = [1,2,3,4,5,6,7,8,9,10];</h3>
+
+<h3 id="var-newarray-oldarray-filter-function-val">var newArray = oldArray.filter(function(val) {</h3>
+
+<h3 id="return-val-6">return val &lt; 6;</h3>
+
+<h3 id="toc_20">});</h3>
+
+<hr />
+
+<h3 id="sort方法-排序数组">sort方法，排序数组</h3>
+
+<h3 id="var-array-1-12-21-2">var array = [1, 12, 21, 2];</h3>
+
+<h3 id="array-sort-function-a-b">array.sort(function(a, b) {</h3>
+
+<h3 id="return-a-b">return a - b;</h3>
+
+<h3 id="toc_25">});</h3>
+
+<h3 id="array-1-2-12-21">array = [1, 2, 12, 21];</h3>
+
+<hr />
+
+<h3 id="reverse方法-翻转数组">reverse方法，翻转数组</h3>
+
+<h3 id="var-array-1-2-3-4-5-6-7">var array = [1,2,3,4,5,6,7];</h3>
+
+<h3 id="array-reverse">array.reverse();</h3>
+
+<h3 id="array-7-6-5-4-3-2-1">array = [7, 6, 5, 4, 3, 2, 1];</h3>
+
+<hr />
+
+<h3 id="concat方法-拼接数组">concat方法，拼接数组</h3>
+
+<h3 id="newarray-oldarray-concat-otherarray">newArray = oldArray.concat(otherArray);</h3>
+
+<h3 id="otherarray-拼接在-oldarray-的后面-并赋值给newarrey">otherArray<code>拼接在</code>oldArray` 的后面 并赋值给newArrey</h3>
+
+<hr />
+
+<h3 id="split方法-将字符串分割为数组">split方法， 将字符串分割为数组</h3>
+
+<h3 id="var-array-string-split-按空格进行分割">var array = string.split(&rsquo; &lsquo;); （按空格进行分割)</h3>
+
+<hr />
+
+<h3 id="join方法-将数组转换为字符串">join方法，将数组转换为字符串</h3>
+
+<h3 id="joinedstring-joinme-join-数组元素间增添一个空格-组成字符串">joinedString = joinMe.join(&rdquo; &ldquo;);   （数组元素间增添一个空格，组成字符串）</h3>
+]]></content>
+		</item>
 		
 		<item>
 			<title>python列表函数小结</title>

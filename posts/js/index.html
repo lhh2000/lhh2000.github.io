@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="javascript数组小结">
+<meta itemprop="description" content="push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组&#43;3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val &#43; 3;">
+
+
+<meta itemprop="datePublished" content="2019-11-07T12:31:25&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-07T12:31:25&#43;08:00" />
+<meta itemprop="wordCount" content="347">
+
+
+
+<meta itemprop="keywords" content="untagged," />
+<meta property="og:title" content="javascript数组小结" />
+<meta property="og:description" content="push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组&#43;3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val &#43; 3;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lhh2000.github.io/posts/js/" />
+<meta property="article:published_time" content="2019-11-07T12:31:25+08:00" />
+<meta property="article:modified_time" content="2019-11-07T12:31:25+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="javascript数组小结"/>
+<meta name="twitter:description" content="push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组&#43;3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val &#43; 3;"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>javascript数组小结</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lhh2000.github.io//posts">小李的博客</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lhh2000.github.io/about_me/">About</a>
+<a href="https://lhh2000.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lhh2000.github.io/about_me/">About</a></li>
+			<li><a href="https://lhh2000.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Nov 7, 2019</span></div>
+			<h1>javascript数组小结</h1>
+		</header>
+		<div class="content">
+			
+
+<h3 id="push-推入数组末尾">push()  推入数组末尾<a href="#push-推入数组末尾" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="pop-移除数组末项">pop()  移除数组末项<a href="#pop-移除数组末项" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="shift-移除数组首项">shift()  移除数组首项<a href="#shift-移除数组首项" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="unshift-移入数组首项">unshift()  移入数组首项<a href="#unshift-移入数组首项" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="map方法-不改变原数组-获得新数组-示例中将原数组-3">map方法，不改变原数组，获得新数组 (示例中将原数组+3)<a href="#map方法-不改变原数组-获得新数组-示例中将原数组-3" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-oldarray-1-2-3-4-5">var oldArray = [1,2,3,4,5];<a href="#var-oldarray-1-2-3-4-5" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-newarray-oldarray-map-function-val">var newArray = oldArray.map(function(val) {<a href="#var-newarray-oldarray-map-function-val" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="return-val-3">return val + 3;<a href="#return-val-3" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="toc_8">});<a href="#toc_8" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="newarray-4-5-6-7-8">newArray = [4,5,6,7,8];<a href="#newarray-4-5-6-7-8" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="reduce方法-迭代一个数组-示例中将数组所有数相加">reduce方法，迭代一个数组 (示例中将数组所有数相加)<a href="#reduce方法-迭代一个数组-示例中将数组所有数相加" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-array-4-5-6-7-8">var array = [4,5,6,7,8];<a href="#var-array-4-5-6-7-8" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="singleval-array-reduce-function-previousval-currentval">singleVal = array.reduce(function(previousVal, currentVal) {<a href="#singleval-array-reduce-function-previousval-currentval" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-sum-previousval-currentval">var sum = previousVal + currentVal;<a href="#var-sum-previousval-currentval" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="return-sum">return sum;<a href="#return-sum" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="toc_15">});<a href="#toc_15" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="filter方法-过滤一个数组-示例中将数组小于6的数滤出">filter方法，过滤一个数组 (示例中将数组小于6的数滤出)<a href="#filter方法-过滤一个数组-示例中将数组小于6的数滤出" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-oldarray-1-2-3-4-5-6-7-8-9-10">var oldArray = [1,2,3,4,5,6,7,8,9,10];<a href="#var-oldarray-1-2-3-4-5-6-7-8-9-10" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-newarray-oldarray-filter-function-val">var newArray = oldArray.filter(function(val) {<a href="#var-newarray-oldarray-filter-function-val" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="return-val-6">return val &lt; 6;<a href="#return-val-6" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="toc_20">});<a href="#toc_20" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="sort方法-排序数组">sort方法，排序数组<a href="#sort方法-排序数组" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-array-1-12-21-2">var array = [1, 12, 21, 2];<a href="#var-array-1-12-21-2" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="array-sort-function-a-b">array.sort(function(a, b) {<a href="#array-sort-function-a-b" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="return-a-b">return a - b;<a href="#return-a-b" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="toc_25">});<a href="#toc_25" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="array-1-2-12-21">array = [1, 2, 12, 21];<a href="#array-1-2-12-21" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="reverse方法-翻转数组">reverse方法，翻转数组<a href="#reverse方法-翻转数组" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-array-1-2-3-4-5-6-7">var array = [1,2,3,4,5,6,7];<a href="#var-array-1-2-3-4-5-6-7" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="array-reverse">array.reverse();<a href="#array-reverse" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="array-7-6-5-4-3-2-1">array = [7, 6, 5, 4, 3, 2, 1];<a href="#array-7-6-5-4-3-2-1" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="concat方法-拼接数组">concat方法，拼接数组<a href="#concat方法-拼接数组" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="newarray-oldarray-concat-otherarray">newArray = oldArray.concat(otherArray);<a href="#newarray-oldarray-concat-otherarray" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="otherarray-拼接在-oldarray-的后面-并赋值给newarrey">otherArray<code>拼接在</code>oldArray` 的后面 并赋值给newArrey<a href="#otherarray-拼接在-oldarray-的后面-并赋值给newarrey" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="split方法-将字符串分割为数组">split方法， 将字符串分割为数组<a href="#split方法-将字符串分割为数组" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="var-array-string-split-按空格进行分割">var array = string.split(&rsquo; &lsquo;); （按空格进行分割)<a href="#var-array-string-split-按空格进行分割" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="join方法-将数组转换为字符串">join方法，将数组转换为字符串<a href="#join方法-将数组转换为字符串" class="anchor" aria-hidden="true">#</a></h3>
+
+<h3 id="joinedstring-joinme-join-数组元素间增添一个空格-组成字符串">joinedString = joinMe.join(&rdquo; &ldquo;);   （数组元素间增添一个空格，组成字符串）<a href="#joinedstring-joinme-join-数组元素间增添一个空格-组成字符串" class="anchor" aria-hidden="true">#</a></h3>
+
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-tag meta-icon">
+					<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+					<line x1="7" y1="7" x2="7" y2="7"></line>
+				</svg><span class="tag"><a href="https://lhh2000.github.io/%20tags/untagged">untagged</a></span>
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				347 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2019-11-07 12:31 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="prev-post" href="https://lhh2000.github.io/posts/py/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>python列表函数小结</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2019 <a href="https://lhh2000.github.io/">lhh</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<div id="home-social">
+			<a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter">Twitter</a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram">Instagram</a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github">Github</a>
+		</div>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lhh2000.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lhh2000.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>
