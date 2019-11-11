@@ -48,5 +48,14 @@
       <description>fumeboy 测试</description>
     </item>
     
+    <item>
+      <title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
+      <link>https://lhh2000.github.io/posts/c/</link>
+      <pubDate>Sat, 26 Oct 2019 21:31:25 +0800</pubDate>
+      
+      <guid>https://lhh2000.github.io/posts/c/</guid>
+      <description>max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&amp;#34;%d%d%d\n&amp;#34;, a[0], a[1], a[2]); }while(next_permutation(a, a + 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2</description>
+    </item>
+    
   </channel>
 </rss>

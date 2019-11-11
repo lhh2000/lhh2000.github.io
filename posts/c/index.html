@@ -7,26 +7,26 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
-<meta itemprop="name" content="python列表函数小结">
-<meta itemprop="description" content="append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&lsquo;content&rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列">
+<meta itemprop="name" content="C&#43;&#43; &lt;algorithm&gt;头文件下常用函数">
+<meta itemprop="description" content="max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&#34;%d%d%d\n&#34;, a[0], a[1], a[2]); }while(next_permutation(a, a &#43; 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2">
 
 
-<meta itemprop="datePublished" content="2019-11-07T11:04:25&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-07T11:04:25&#43;08:00" />
-<meta itemprop="wordCount" content="94">
+<meta itemprop="datePublished" content="2019-10-26T21:31:25&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-26T21:31:25&#43;08:00" />
+<meta itemprop="wordCount" content="93">
 
 
 
 <meta itemprop="keywords" content="untagged," />
-<meta property="og:title" content="python列表函数小结" />
-<meta property="og:description" content="append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&lsquo;content&rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列" />
+<meta property="og:title" content="C&#43;&#43; &lt;algorithm&gt;头文件下常用函数" />
+<meta property="og:description" content="max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&#34;%d%d%d\n&#34;, a[0], a[1], a[2]); }while(next_permutation(a, a &#43; 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lhh2000.github.io/posts/py/" />
-<meta property="article:published_time" content="2019-11-07T11:04:25+08:00" />
-<meta property="article:modified_time" content="2019-11-07T11:04:25+08:00" />
+<meta property="og:url" content="https://lhh2000.github.io/posts/c/" />
+<meta property="article:published_time" content="2019-10-26T21:31:25+08:00" />
+<meta property="article:modified_time" content="2019-10-26T21:31:25+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="python列表函数小结"/>
-<meta name="twitter:description" content="append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&lsquo;content&rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列"/>
+<meta name="twitter:title" content="C&#43;&#43; &lt;algorithm&gt;头文件下常用函数"/>
+<meta name="twitter:description" content="max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&#34;%d%d%d\n&#34;, a[0], a[1], a[2]); }while(next_permutation(a, a &#43; 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,7 +35,7 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	<title>python列表函数小结</title>
+	<title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
 	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
@@ -74,30 +74,63 @@
 <main class="site-main section-inner animated fadeIn faster">
 	<article class="thin">
 		<header class="post-header">
-			<div class="post-meta"><span>Nov 7, 2019</span></div>
-			<h1>python列表函数小结</h1>
+			<div class="post-meta"><span>Oct 26, 2019</span></div>
+			<h1>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</h1>
 		</header>
 		<div class="content">
-			
+			<hr />
+
+<p>max(x, y)</p>
 
 <hr />
 
-<h3 id="append-附加元素到列表末尾">append()   附加元素到列表末尾<a href="#append-附加元素到列表末尾" class="anchor" aria-hidden="true">#</a></h3>
+<p>min(x, y)</p>
 
-<h3 id="insert-index-value-插入元素到指定位置">insert(index, value)   插入元素到指定位置<a href="#insert-index-value-插入元素到指定位置" class="anchor" aria-hidden="true">#</a></h3>
+<hr />
 
-<h3 id="del-lists-index-del语句删除元素">del  lists[index]   del语句删除元素<a href="#del-lists-index-del语句删除元素" class="anchor" aria-hidden="true">#</a></h3>
+<p>abs(x)</p>
 
-<h3 id="pop-默认弹出末尾元素-pop-index-弹出指定位置元素">pop()   默认弹出末尾元素; pop(index), 弹出指定位置元素<a href="#pop-默认弹出末尾元素-pop-index-弹出指定位置元素" class="anchor" aria-hidden="true">#</a></h3>
+<hr />
 
-<h3 id="remove-content-根据元素的值-删除元素">remove(&lsquo;content&rsquo;)   根据元素的值, 删除元素<a href="#remove-content-根据元素的值-删除元素" class="anchor" aria-hidden="true">#</a></h3>
+<p>swap(x, y)</p>
 
-<h3 id="sort-字母顺序排列-sort-reverse-ture-字母逆序排列">sort()   字母顺序排列; sort(reverse = Ture)   字母逆序排列<a href="#sort-字母顺序排列-sort-reverse-ture-字母逆序排列" class="anchor" aria-hidden="true">#</a></h3>
+<hr />
 
-<h3 id="reverse-反转列表元素">reverse() 反转列表元素<a href="#reverse-反转列表元素" class="anchor" aria-hidden="true">#</a></h3>
+<p>reverse(it, it2)  [it, it2) 翻转</p>
 
-<h3 id="len-lists-获取列表长度">len(lists)   获取列表长度<a href="#len-lists-获取列表长度" class="anchor" aria-hidden="true">#</a></h3>
+<hr />
 
+<p>next_permutatuin() 给出一个序列在全排列中的下一个序列</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+<span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d%d%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span></code></pre></div>
+<p>输出结果:</p>
+
+<pre><code>123
+132
+213
+231
+312
+321
+</code></pre>
+
+<hr />
+
+<p>fill(it, it2, value)</p>
+
+<hr />
+
+<p>sort(it, it2)</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//顺序
+</span><span class="c1"></span><span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">//逆序
+</span><span class="c1"></span><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">,</span> <span class="n">cmp</span><span class="p">)</span>  <span class="c1">//整型
+</span></code></pre></div>
 		</div>
 		<hr class="post-end">
 		<footer class="post-info">
@@ -119,7 +152,7 @@
 					<line x1="16" y1="17" x2="8" y2="17"></line>
 					<polyline points="10 9 9 9 8 9"></polyline>
 				</svg>
-				94 字
+				93 字
 			</p>
 			<p>
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -130,28 +163,18 @@
 					<line x1="8" y1="2" x2="8" y2="6"></line>
 					<line x1="3" y1="10" x2="21" y2="10"></line>
 				</svg>
-				2019-11-07 11:04 &#43;0800
+				2019-10-26 21:31 &#43;0800
 			</p>
 		</footer>
 	</article>
 	<div class="post-nav thin">
-		<a class="next-post" href="https://lhh2000.github.io/posts/js/">
+		<a class="next-post" href="https://lhh2000.github.io/posts/py/">
 			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
 																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
 																																																				 x2="5"
 																																																				 y2="12"></line><polyline
-				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>javascript数组小结</span>
-		</a>
-		<a class="prev-post" href="https://lhh2000.github.io/posts/c/">
-			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
-																																height="24" viewBox="0 0 24 24" fill="none"
-																																stroke="currentColor" stroke-width="2"
-																																stroke-linecap="round" stroke-linejoin="round"
-																																class="feather feather-arrow-right"><line x1="5" y1="12"
-																																																					x2="19"
-																																																					y2="12"></line><polyline
-				points="12 5 19 12 12 19"></polyline></svg></span><br><span>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</span>
+				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>python列表函数小结</span>
 		</a>
 	</div>
 </main>

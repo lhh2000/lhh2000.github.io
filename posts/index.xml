@@ -212,5 +212,67 @@
 ]]></content>
 		</item>
 		
+		<item>
+			<title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
+			<link>https://lhh2000.github.io/posts/c/</link>
+			<pubDate>Sat, 26 Oct 2019 21:31:25 +0800</pubDate>
+			
+			<guid>https://lhh2000.github.io/posts/c/</guid>
+			<description>max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&amp;#34;%d%d%d\n&amp;#34;, a[0], a[1], a[2]); }while(next_permutation(a, a + 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2</description>
+			<content type="html"><![CDATA[<hr />
+
+<p>max(x, y)</p>
+
+<hr />
+
+<p>min(x, y)</p>
+
+<hr />
+
+<p>abs(x)</p>
+
+<hr />
+
+<p>swap(x, y)</p>
+
+<hr />
+
+<p>reverse(it, it2)  [it, it2) 翻转</p>
+
+<hr />
+
+<p>next_permutatuin() 给出一个序列在全排列中的下一个序列</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+<span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d%d%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span></code></pre></div>
+<p>输出结果:</p>
+
+<pre><code>123
+132
+213
+231
+312
+321
+</code></pre>
+
+<hr />
+
+<p>fill(it, it2, value)</p>
+
+<hr />
+
+<p>sort(it, it2)</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//顺序
+</span><span class="c1"></span><span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">//逆序
+</span><span class="c1"></span><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">,</span> <span class="n">cmp</span><span class="p">)</span>  <span class="c1">//整型
+</span></code></pre></div>]]></content>
+		</item>
+		
 	</channel>
 </rss>
