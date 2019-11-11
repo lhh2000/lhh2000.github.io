@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 07 Nov 2019 12:50:25 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 21:51:25 +0800</lastBuildDate>
     
 	<atom:link href="https://lhh2000.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
+      <link>https://lhh2000.github.io/posts/c/</link>
+      <pubDate>Mon, 11 Nov 2019 21:51:25 +0800</pubDate>
+      
+      <guid>https://lhh2000.github.io/posts/c/</guid>
+      <description>max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&amp;#34;%d%d%d\n&amp;#34;, a[0], a[1], a[2]); }while(next_permutation(a, a + 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2</description>
+    </item>
+    
+    <item>
       <title>javascript杂项小结</title>
       <link>https://lhh2000.github.io/posts/js2/</link>
-      <pubDate>Thu, 07 Nov 2019 12:50:25 +0000</pubDate>
+      <pubDate>Thu, 07 Nov 2019 12:50:25 +0800</pubDate>
       
       <guid>https://lhh2000.github.io/posts/js2/</guid>
       <description>myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; } // 返回</description>
@@ -24,7 +33,7 @@
     <item>
       <title>javascript数组小结</title>
       <link>https://lhh2000.github.io/posts/js/</link>
-      <pubDate>Thu, 07 Nov 2019 12:31:25 +0000</pubDate>
+      <pubDate>Thu, 07 Nov 2019 12:31:25 +0800</pubDate>
       
       <guid>https://lhh2000.github.io/posts/js/</guid>
       <description>push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组+3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val + 3;</description>
@@ -33,7 +42,7 @@
     <item>
       <title>python列表函数小结</title>
       <link>https://lhh2000.github.io/posts/py/</link>
-      <pubDate>Thu, 07 Nov 2019 11:04:25 +0000</pubDate>
+      <pubDate>Thu, 07 Nov 2019 11:04:25 +0800</pubDate>
       
       <guid>https://lhh2000.github.io/posts/py/</guid>
       <description>append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&amp;lsquo;content&amp;rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列</description>
@@ -46,15 +55,6 @@
       
       <guid>https://lhh2000.github.io/friends/</guid>
       <description>fumeboy 测试</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
-      <link>https://lhh2000.github.io/posts/c/</link>
-      <pubDate>Sat, 26 Oct 2019 21:31:25 +0800</pubDate>
-      
-      <guid>https://lhh2000.github.io/posts/c/</guid>
-      <description>max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&amp;#34;%d%d%d\n&amp;#34;, a[0], a[1], a[2]); }while(next_permutation(a, a + 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2</description>
     </item>
     
   </channel>

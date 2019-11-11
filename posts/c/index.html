@@ -11,8 +11,8 @@
 <meta itemprop="description" content="max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&#34;%d%d%d\n&#34;, a[0], a[1], a[2]); }while(next_permutation(a, a &#43; 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2">
 
 
-<meta itemprop="datePublished" content="2019-10-26T21:31:25&#43;08:00" />
-<meta itemprop="dateModified" content="2019-10-26T21:31:25&#43;08:00" />
+<meta itemprop="datePublished" content="2019-11-11T21:51:25&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-11T21:51:25&#43;08:00" />
 <meta itemprop="wordCount" content="93">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:description" content="max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&#34;%d%d%d\n&#34;, a[0], a[1], a[2]); }while(next_permutation(a, a &#43; 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lhh2000.github.io/posts/c/" />
-<meta property="article:published_time" content="2019-10-26T21:31:25+08:00" />
-<meta property="article:modified_time" content="2019-10-26T21:31:25+08:00" />
+<meta property="article:published_time" content="2019-11-11T21:51:25+08:00" />
+<meta property="article:modified_time" content="2019-11-11T21:51:25+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="C&#43;&#43; &lt;algorithm&gt;头文件下常用函数"/>
 <meta name="twitter:description" content="max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&#34;%d%d%d\n&#34;, a[0], a[1], a[2]); }while(next_permutation(a, a &#43; 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2"/>
@@ -74,38 +74,40 @@
 <main class="site-main section-inner animated fadeIn faster">
 	<article class="thin">
 		<header class="post-header">
-			<div class="post-meta"><span>Oct 26, 2019</span></div>
+			<div class="post-meta"><span>Nov 11, 2019</span></div>
 			<h1>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</h1>
 		</header>
 		<div class="content">
-			<hr />
-
-<p>max(x, y)</p>
+			
 
 <hr />
 
-<p>min(x, y)</p>
+<h3 id="max-x-y">max(x, y)<a href="#max-x-y" class="anchor" aria-hidden="true">#</a></h3>
 
 <hr />
 
-<p>abs(x)</p>
+<h3 id="min-x-y">min(x, y)<a href="#min-x-y" class="anchor" aria-hidden="true">#</a></h3>
 
 <hr />
 
-<p>swap(x, y)</p>
+<h3 id="abs-x">abs(x)<a href="#abs-x" class="anchor" aria-hidden="true">#</a></h3>
 
 <hr />
 
-<p>reverse(it, it2)  [it, it2) 翻转</p>
+<h3 id="swap-x-y">swap(x, y)<a href="#swap-x-y" class="anchor" aria-hidden="true">#</a></h3>
 
 <hr />
 
-<p>next_permutatuin() 给出一个序列在全排列中的下一个序列</p>
+<h3 id="reverse-it-it2-it-it2-翻转">reverse(it, it2)  [it, it2) 翻转<a href="#reverse-it-it2-it-it2-翻转" class="anchor" aria-hidden="true">#</a></h3>
+
+<hr />
+
+<h3 id="next-permutatuin-给出一个序列在全排列中的下一个序列">next_permutatuin() 给出一个序列在全排列中的下一个序列<a href="#next-permutatuin-给出一个序列在全排列中的下一个序列" class="anchor" aria-hidden="true">#</a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
 <span class="k">do</span><span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d%d%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span></code></pre></div>
-<p>输出结果:</p>
+<h3 id="输出结果">输出结果:<a href="#输出结果" class="anchor" aria-hidden="true">#</a></h3>
 
 <pre><code>123
 132
@@ -117,11 +119,11 @@
 
 <hr />
 
-<p>fill(it, it2, value)</p>
+<h3 id="fill-it-it2-value">fill(it, it2, value)<a href="#fill-it-it2-value" class="anchor" aria-hidden="true">#</a></h3>
 
 <hr />
 
-<p>sort(it, it2)</p>
+<h3 id="sort-it-it2">sort(it, it2)<a href="#sort-it-it2" class="anchor" aria-hidden="true">#</a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//顺序
 </span><span class="c1"></span><span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">//逆序
 </span><span class="c1"></span><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
@@ -163,18 +165,20 @@
 					<line x1="8" y1="2" x2="8" y2="6"></line>
 					<line x1="3" y1="10" x2="21" y2="10"></line>
 				</svg>
-				2019-10-26 21:31 &#43;0800
+				2019-11-11 21:51 &#43;0800
 			</p>
 		</footer>
 	</article>
 	<div class="post-nav thin">
-		<a class="next-post" href="https://lhh2000.github.io/posts/py/">
-			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
-																																																				 x2="5"
-																																																				 y2="12"></line><polyline
-				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>python列表函数小结</span>
+		<a class="prev-post" href="https://lhh2000.github.io/posts/js2/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>javascript杂项小结</span>
 		</a>
 	</div>
 </main>

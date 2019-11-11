@@ -6,23 +6,89 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 07 Nov 2019 12:50:25 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 11 Nov 2019 21:51:25 +0800</lastBuildDate>
 		<atom:link href="https://lhh2000.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
+			<link>https://lhh2000.github.io/posts/c/</link>
+			<pubDate>Mon, 11 Nov 2019 21:51:25 +0800</pubDate>
+			
+			<guid>https://lhh2000.github.io/posts/c/</guid>
+			<description>max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&amp;#34;%d%d%d\n&amp;#34;, a[0], a[1], a[2]); }while(next_permutation(a, a + 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2</description>
+			<content type="html"><![CDATA[
+
+<hr />
+
+<h3 id="max-x-y">max(x, y)</h3>
+
+<hr />
+
+<h3 id="min-x-y">min(x, y)</h3>
+
+<hr />
+
+<h3 id="abs-x">abs(x)</h3>
+
+<hr />
+
+<h3 id="swap-x-y">swap(x, y)</h3>
+
+<hr />
+
+<h3 id="reverse-it-it2-it-it2-翻转">reverse(it, it2)  [it, it2) 翻转</h3>
+
+<hr />
+
+<h3 id="next-permutatuin-给出一个序列在全排列中的下一个序列">next_permutatuin() 给出一个序列在全排列中的下一个序列</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+<span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d%d%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span></code></pre></div>
+<h3 id="输出结果">输出结果:</h3>
+
+<pre><code>123
+132
+213
+231
+312
+321
+</code></pre>
+
+<hr />
+
+<h3 id="fill-it-it2-value">fill(it, it2, value)</h3>
+
+<hr />
+
+<h3 id="sort-it-it2">sort(it, it2)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//顺序
+</span><span class="c1"></span><span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">//逆序
+</span><span class="c1"></span><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">,</span> <span class="n">cmp</span><span class="p">)</span>  <span class="c1">//整型
+</span></code></pre></div>]]></content>
+		</item>
 		
 		<item>
 			<title>javascript杂项小结</title>
 			<link>https://lhh2000.github.io/posts/js2/</link>
-			<pubDate>Thu, 07 Nov 2019 12:50:25 +0000</pubDate>
+			<pubDate>Thu, 07 Nov 2019 12:50:25 +0800</pubDate>
 			
 			<guid>https://lhh2000.github.io/posts/js2/</guid>
 			<description>myObj.hasOwnProperty(propname) 有该属性返回true，无该属性返回false Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数 function randomRange(myMin, myMax) { return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; } // 返回</description>
-			<content type="html"><![CDATA[<hr />
-
-<p>myObj.hasOwnProperty(propname)  有该属性返回true，无该属性返回false</p>
+			<content type="html"><![CDATA[
 
 <hr />
 
-<p>Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数</p>
+<h3 id="myobj-hasownproperty-propname-有该属性返回true-无该属性返回false">myObj.hasOwnProperty(propname)  有该属性返回true，无该属性返回false</h3>
+
+<hr />
+
+<h3 id="math-random-用来生成一个在0-包括0-到1-不包括1-之间的随机小数">Math.random() 用来生成一个在0(包括0)到1(不包括1)之间的随机小数</h3>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">randomRange</span><span class="p">(</span><span class="nx">myMin</span><span class="p">,</span> <span class="nx">myMax</span><span class="p">)</span> <span class="p">{</span>
 
 <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">myMax</span> <span class="o">-</span> <span class="nx">myMin</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">myMin</span><span class="p">;</span>
@@ -30,27 +96,27 @@
 </span></code></pre></div>
 <hr />
 
-<p>Math.floor()  向下取整</p>
+<h3 id="math-floor-向下取整">Math.floor()  向下取整</h3>
 
 <hr />
 
-<p>var expression = /and/gi; //  g 代表全局， i 代表忽略大小写</p>
+<h3 id="var-expression-and-gi-g-代表全局-i-代表忽略大小写">var expression = /and/gi; //  g 代表全局， i 代表忽略大小写</h3>
 
-<p>var andCount = testString.match(expression).length;  // 用 andCount 存储 testString 中匹配到 expression 的次数</p>
+<h3 id="var-andcount-teststring-match-expression-length-用-andcount-存储-teststring-中匹配到-expression-的次数">var andCount = testString.match(expression).length;  // 用 andCount 存储 testString 中匹配到 expression 的次数</h3>
 
-<p>/\d+/g;    &ldquo;+&rdquo; 表示允许正则表达式匹配一个或更多数字</p>
+<h3 id="d-g-表示允许正则表达式匹配一个或更多数字">/\d+/g;    &ldquo;+&rdquo; 表示允许正则表达式匹配一个或更多数字</h3>
 
-<p>​               &ldquo;g&rdquo; 表示允许正则表达式找到所有匹配而不是仅仅找到第一个匹配</p>
+<h3 id="g-表示允许正则表达式找到所有匹配而不是仅仅找到第一个匹配">&ldquo;g&rdquo; 表示允许正则表达式找到所有匹配而不是仅仅找到第一个匹配</h3>
 
-<p>/\s+/g;  匹配一个字符串中的空白字符</p>
+<h3 id="s-g-匹配一个字符串中的空白字符">/\s+/g;  匹配一个字符串中的空白字符</h3>
 
-<p>/\S/g;  匹配一个字符串中的非空白字符</p>
+<h3 id="s-g-匹配一个字符串中的非空白字符">/\S/g;  匹配一个字符串中的非空白字符</h3>
 
 <hr />
 
-<p>对象自身的特征：属性</p>
+<h3 id="对象自身的特征-属性">对象自身的特征：属性</h3>
 
-<p>对象自身的函数：方法</p>
+<h3 id="对象自身的函数-方法">对象自身的函数：方法</h3>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">motorBike</span> <span class="o">=</span> <span class="p">{</span>                         <span class="c1">//直接创建对象
 </span><span class="c1"></span><span class="s2">&#34;engines&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
 <span class="s2">&#34;wheels&#34;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -90,7 +156,7 @@
 		<item>
 			<title>javascript数组小结</title>
 			<link>https://lhh2000.github.io/posts/js/</link>
-			<pubDate>Thu, 07 Nov 2019 12:31:25 +0000</pubDate>
+			<pubDate>Thu, 07 Nov 2019 12:31:25 +0800</pubDate>
 			
 			<guid>https://lhh2000.github.io/posts/js/</guid>
 			<description>push() 推入数组末尾 pop() 移除数组末项 shift() 移除数组首项 unshift() 移入数组首项 map方法，不改变原数组，获得新数组 (示例中将原数组+3) var oldArray = [1,2,3,4,5]; var newArray = oldArray.map(function(val) { return val + 3;</description>
@@ -186,7 +252,7 @@
 		<item>
 			<title>python列表函数小结</title>
 			<link>https://lhh2000.github.io/posts/py/</link>
-			<pubDate>Thu, 07 Nov 2019 11:04:25 +0000</pubDate>
+			<pubDate>Thu, 07 Nov 2019 11:04:25 +0800</pubDate>
 			
 			<guid>https://lhh2000.github.io/posts/py/</guid>
 			<description>append() 附加元素到列表末尾 insert(index, value) 插入元素到指定位置 del lists[index] del语句删除元素 pop() 默认弹出末尾元素; pop(index), 弹出指定位置元素 remove(&amp;lsquo;content&amp;rsquo;) 根据元素的值, 删除元素 sort() 字母顺序排列</description>
@@ -210,68 +276,6 @@
 
 <h3 id="len-lists-获取列表长度">len(lists)   获取列表长度</h3>
 ]]></content>
-		</item>
-		
-		<item>
-			<title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
-			<link>https://lhh2000.github.io/posts/c/</link>
-			<pubDate>Sat, 26 Oct 2019 21:31:25 +0800</pubDate>
-			
-			<guid>https://lhh2000.github.io/posts/c/</guid>
-			<description>max(x, y) min(x, y) abs(x) swap(x, y) reverse(it, it2) [it, it2) 翻转 next_permutatuin() 给出一个序列在全排列中的下一个序列 int a[10] = {1, 2, 3}; do{ printf(&amp;#34;%d%d%d\n&amp;#34;, a[0], a[1], a[2]); }while(next_permutation(a, a + 3)); 输出结果: 123 132 213 231 312 321 fill(it, it2, value) sort(it, it2) //顺序 sort(it, it2</description>
-			<content type="html"><![CDATA[<hr />
-
-<p>max(x, y)</p>
-
-<hr />
-
-<p>min(x, y)</p>
-
-<hr />
-
-<p>abs(x)</p>
-
-<hr />
-
-<p>swap(x, y)</p>
-
-<hr />
-
-<p>reverse(it, it2)  [it, it2) 翻转</p>
-
-<hr />
-
-<p>next_permutatuin() 给出一个序列在全排列中的下一个序列</p>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
-<span class="k">do</span><span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d%d%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span></code></pre></div>
-<p>输出结果:</p>
-
-<pre><code>123
-132
-213
-231
-312
-321
-</code></pre>
-
-<hr />
-
-<p>fill(it, it2, value)</p>
-
-<hr />
-
-<p>sort(it, it2)</p>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//顺序
-</span><span class="c1"></span><span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">//逆序
-</span><span class="c1"></span><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">sort</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">it2</span><span class="p">,</span> <span class="n">cmp</span><span class="p">)</span>  <span class="c1">//整型
-</span></code></pre></div>]]></content>
 		</item>
 		
 	</channel>
