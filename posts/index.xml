@@ -6,23 +6,8 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 20 Nov 2019 11:41:25 +0800</lastBuildDate>
+		<lastBuildDate>Mon, 11 Nov 2019 21:51:25 +0800</lastBuildDate>
 		<atom:link href="https://lhh2000.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>进来康美女</title>
-			<link>https://lhh2000.github.io/posts/lyr/</link>
-			<pubDate>Wed, 20 Nov 2019 11:41:25 +0800</pubDate>
-			
-			<guid>https://lhh2000.github.io/posts/lyr/</guid>
-			<description>嘻嘻</description>
-			<content type="html"><![CDATA[
-
-<p><img src="https://i.loli.net/2019/11/20/FYbIHUMyV9RTGtz.jpg" alt="Cache_117556480780c4f6..jpg" /></p>
-
-<h2 id="嘻嘻">嘻嘻</h2>
-]]></content>
-		</item>
 		
 		<item>
 			<title>C&#43;&#43; &lt;algorithm&gt;头文件下常用函数</title>
